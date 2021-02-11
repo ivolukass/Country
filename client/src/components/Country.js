@@ -1,21 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Link } from 'react-router-dom';
-
-const COUNTRY_QUERY =gql`
-query Country($code: ID!) {
-    country(code: $code) {
-        code
-   	    name
-        native
-    	phone
-    	capital
-        currency
-        
-    }
-  }
-`;
+import COUNTRY_QUERY from '../graphQL/country';
 
 export class Country extends Component {
     render() {
