@@ -1,17 +1,16 @@
-import gql from 'graphql-tag';
+import gql from "graphql-tag";
 
-const COUNTRY_QUERY =gql`
-query Country($code: ID!) {
+const COUNTRY_QUERY = gql`
+  query Country($code: ID!) {
     country(code: $code) {
-        code
-   	    name
-        native
-    	phone
-    	capital
-        currency
-        
+      code
+      name
+      native
+      phone
+      capital
+      currency
     }
   }
 `;
 
-export default COUNTRY_QUERY
+export default COUNTRY_QUERY;
